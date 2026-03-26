@@ -1,0 +1,25 @@
+# Minimum funding rate spread to consider (0.1%)
+min_spread: 0.001
+
+# Risk scoring weights
+risk_weights:
+  spread_stability: 0.35
+  oi_depth: 0.25
+  historical_variance: 0.20
+  exchange_reliability: 0.20
+
+# Blacklisted symbols (known issues)
+blacklist:
+  - RDNT  # BG error 45110
+
+# Exchange priorities (higher = more reliable)
+exchange_priority:
+  Gate: 0.9
+  Bitget: 0.95
+  Aster: 0.85
+
+# Default position size (USDT)
+default_position_size: 10
+
+# Maximum daily return to trust (above this = suspicious)
+max_trustworthy_daily_return: 5.0  # 5%/day
